@@ -1,4 +1,8 @@
-![GitHub Logo](/images/pokedex.png)
+<h1 align="center">
+  <img width="250" height="auto" src="/images/pokedex.png">
+  
+   Pokédex
+</h1>
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/AdrielFF/pokedex)
 
