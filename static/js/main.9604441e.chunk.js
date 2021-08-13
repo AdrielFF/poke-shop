@@ -1,0 +1,2 @@
+(this["webpackJsonppoke-shop"]=this["webpackJsonppoke-shop"]||[]).push([[0],{10:function(e,t,n){"use strict";n.r(t);var o=n(1),c=n.n(o),r=n(3),s=n.n(r),i=(n(8),n(0)),d=function(){return Object(i.jsx)("div",{children:Object(i.jsx)("strong",{children:"Hello World!"})})};s.a.render(Object(i.jsx)(c.a.StrictMode,{children:Object(i.jsx)(d,{})}),document.getElementById("root"))},8:function(e,t,n){}},[[10,1,2]]]);
+//# sourceMappingURL=main.9604441e.chunk.js.map
