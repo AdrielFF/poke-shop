@@ -4,9 +4,13 @@
    Pokédex
 </h1>
 
-![GitHub last commit](https://img.shields.io/github/last-commit/AdrielFF/pokedex)
+<h4 align="center">
+  Pokédex is a study project to learn redux using pokemon api to make a web pokédex.
+</h4>
 
-`Pokédex` is a study project to learn redux using pokemon api to make a web pokédex.
+<p align="center">
+  <img alt="Pod Version" src="https://img.shields.io/github/last-commit/AdrielFF/pokedex" />
+</p>
 
 # Installation
 
