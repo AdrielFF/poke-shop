@@ -2,7 +2,7 @@
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/AdrielFF/poke-shop)
 
-`Poke-Shop` is a study project to learn redux using pokemon api to make a virtual store
+`Pokédex` is a study project to learn redux using pokemon api to make a web pokédex.
 
 # Installation
 
