@@ -17,3 +17,6 @@ After this the project will open in your browser in the `http://localhost:3000/p
 
 # Contributing
 Pull request are wellcomed. For major changes, please open an issue first to discuss what you would like to change. 😃
+
+# Current version with gh-pages
+You can see the current version running in `https://adrielff.github.io/poke-shop/`
