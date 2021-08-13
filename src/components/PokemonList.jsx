@@ -21,10 +21,8 @@ const PokemonList = () => {
     
     axios.get('https://pokeapi.co/api/v2/pokemon/ditto')
     .then(function (response) {
-      console.log(response);
     })
     .catch(function (error) {
-      console.log(error);
     })
     .then(function () {
     });
