@@ -8,7 +8,7 @@ import { createTheme, ThemeProvider } from '@material-ui/core/styles'
 
 const theme = createTheme({
   palette: {
-    lightgrey: '#f5f5f5'
+    lightgrey: '#fafafb'
   }
 })
 
