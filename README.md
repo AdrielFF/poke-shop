@@ -1,7 +1,7 @@
 <h1 align="center">
   <img width="250" height="auto" src="/images/pokedex.png">
   
-   Pokédex
+   poke-shop
 </h1>
 
 <h4 align="center">
