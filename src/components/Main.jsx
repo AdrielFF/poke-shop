@@ -1,7 +1,6 @@
 import React from 'react'
 
-import Filters from './Filters'
-
+import { Paper } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 
 import PokemonList from './PokemonList'
@@ -9,9 +8,14 @@ import PokemonList from './PokemonList'
 const useStyles = makeStyles({
   mainWrapper: {
     width: '100%',
-    padding: '6em',
+    maxWidth: 1728,
+    margin: '0 auto',
+    padding: '6em 0',
     display: 'flex',
     flexDirection: 'column'
+  },
+  paper: {
+    height: '100%'
   }
 })
 
@@ -20,8 +24,9 @@ const Main = () => {
 
   return(
     <div className={classes.mainWrapper}>
-      <Filters />
-      <PokemonList />
+      <Paper className={classes.paper} >
+        <PokemonList />
+      </Paper>
     </div>
   )
 }

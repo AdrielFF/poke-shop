@@ -1,6 +1,5 @@
 import React from 'react'
 
-import SideMenu from './components/SideMenu'
 import Main from './components/Main'
 
 import {
@@ -13,7 +12,6 @@ const useStyles = makeStyles({
     width: '100%',
     height: '100%',
     backgroundColor: (props) => props.palette.lightgrey,
-    display: 'flex',
   },
 })
 
@@ -23,7 +21,6 @@ const App = () => {
 
   return (
     <div className={classes.app}>
-      <SideMenu></SideMenu>
       <Main />
     </div>
   )
