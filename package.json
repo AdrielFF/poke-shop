@@ -1,6 +1,6 @@
 {
   "homepage": "http://adrielff.github.io/poke-shop",
-  "name": "pokedex",
+  "name": "poke-shop",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
