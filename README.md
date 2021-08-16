@@ -5,7 +5,7 @@
 </h1>
 
 <h4 align="center">
-  Pokédex is a study project to learn redux using pokemon api to make a web pokédex.
+  poke-shop is a study project to learn redux using pokemon api to make a virtual store.
 </h4>
 
 <p align="center">
