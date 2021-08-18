@@ -5,7 +5,7 @@
 </h1>
 
 <h4 align="center">
-  Pokédex is a study project to learn redux using pokemon api to make a web pokédex.
+  poke-shop is a study project to learn redux using pokemon api to make a virtual store.
 </h4>
 
 <p align="center">
@@ -27,4 +27,4 @@ After this the project will open in your browser in the `http://localhost:3000/p
 Pull request are wellcomed. For major changes, please open an issue first to discuss what you would like to change. 😃
 
 # Current version with gh-pages
-You can see the current version running in `https://adrielff.github.io/poke-shop`
+You can see the current version running in <a href="https://adrielff.github.io/poke-shop">https://adrielff.github.io/poke-shop</a>
