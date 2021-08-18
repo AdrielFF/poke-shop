@@ -11,14 +11,16 @@ import Pokemon from './Pokemon'
 const useStyles = makeStyles({
   list: {
     width: '100%',
-    flexGrow: 1,
-    boxShadow: '12px 0 8px -13px rgba(0, 0, 0, 0.8), -12px 0 8px -13px rgba(0, 0, 0, 0.8)',
     height: '100%',
     display: 'flex',
     flexWrap: 'wrap',
+  },
+  listWrapper: {
+    boxShadow: '12px 0 8px -13px rgba(0, 0, 0, 0.8), -12px 0 8px -13px rgba(0, 0, 0, 0.8)',
     margin: '4em auto',
-    maxWidth: 800,
-    padding: '2em 0',
+    maxWidth: 768,
+    width: '100%',
+    padding: '2em 18px',
   }
 
 })
@@ -29,16 +31,18 @@ const PokemonList = () => {
   const [pokemons, setPokemons] = useState([])
 
   useEffect(() => {
-    axios.get('https://pokeapi.co/api/v2/pokemon').then(res => {
+    axios.get('https://pokeapi.co/api/v2/pokemon?limit=60').then(res => {
       setPokemons(res.data.results)
     })
   }, [])
 
   return (
-    <Box className={classes.list}>
-        {pokemons.map(p =>(
-          <Pokemon key={p.name} url={p.url}/>
-        ))}
+    <Box className={classes.listWrapper}>
+      <Box className={classes.list}>
+          {pokemons.map(p =>(
+            <Pokemon key={p.name} name={p.name} apiUrl={p.url}/>
+          ))}
+      </Box>
     </Box>
   )
 }
