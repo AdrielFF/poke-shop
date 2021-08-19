@@ -1,6 +1,12 @@
 import React from 'react'
 
-import Main from './components/Main'
+import Main from './components/Main/index'
+
+import { Provider } from 'react-redux'
+
+import {store, persistedStore} from './store/store'
+
+import { PersistGate } from 'redux-persist/integration/react'
 
 import {
   makeStyles,
@@ -11,6 +17,7 @@ const useStyles = makeStyles({
   app: {
     width: '100%',
     height: '100%',
+    minHeight: '100vh',
     backgroundColor: (props) => props.palette.lightgrey,
   },
 })
@@ -20,9 +27,13 @@ const App = () => {
   const classes = useStyles(theme)
 
   return (
-    <div className={classes.app}>
-      <Main />
-    </div>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistedStore}>
+        <div className={classes.app}>
+          <Main />
+        </div>
+      </PersistGate>
+    </Provider>
   )
 }
 
