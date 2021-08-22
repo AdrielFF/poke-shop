@@ -21,8 +21,8 @@ export const Main = () => {
       <Paper className={classes.paper} >
         <Router>
           <Switch>
-            <Route exact path="/" component={PokemonList} />
-            <Route path="/pokemon/:name" component={PokemonInfo} />
+            <Route exact path="/poke-shop/" component={PokemonList} />
+            <Route path="/poke-shop/pokemon/:name" component={PokemonInfo} />
           </Switch>
         </Router>
       </Paper>

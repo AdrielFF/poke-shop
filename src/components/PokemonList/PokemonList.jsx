@@ -53,7 +53,7 @@ export const PokemonList = () => {
             <Link
               key={pokemon.name}
               className={classes.link}
-              to={`/pokemon/${pokemon.name}`}
+              to={`/poke-shop/pokemon/${pokemon.name}`}
               >
               <Pokemon pokemon={pokemon} />
             </Link>
