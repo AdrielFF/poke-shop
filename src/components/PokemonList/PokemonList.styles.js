@@ -13,5 +13,10 @@ export const useStyles = makeStyles({
     maxWidth: 768,
     width: '100%',
     padding: '2em 18px',
+  },
+  paginationWrapper: {
+    display: 'flex',
+    justifyContent: 'center',
+    marginTop: '2em',
   }
 })

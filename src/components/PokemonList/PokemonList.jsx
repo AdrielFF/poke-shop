@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
+
 import { useSelector, useDispatch } from 'react-redux'
 
 import { Box } from '@material-ui/core'
+import { Pagination } from '@material-ui/lab'
 
 import axios from 'axios'
 
@@ -16,6 +18,10 @@ export const PokemonList = () => {
   const pokemons = useSelector(selectAllPokemons)
   const dispatch = useDispatch()
 
+  const [currentPage, setCurrentPage] = useState(1)
+
+  const MAX_ITEM_PER_PAGE = 12
+
   useEffect(() => {
     if (pokemons.isFilled === false) {
       axios.get('https://pokeapi.co/api/v2/pokemon?limit=60').then(res => {
@@ -24,13 +30,31 @@ export const PokemonList = () => {
     }
   })
 
+  const handlePageChange = (e, page) => {
+    setCurrentPage(page)
+  }
+
+  const paginatedPokemons = () => {
+    const lastPageItem = currentPage * MAX_ITEM_PER_PAGE
+    const firstPageItemIndex = lastPageItem - MAX_ITEM_PER_PAGE
+    return pokemons.list.slice(firstPageItemIndex, lastPageItem)
+  }
+
+  const maxPages = () => (pokemons.list.length / MAX_ITEM_PER_PAGE)
+
   return (
     <Box className={classes.listWrapper}>
       <Box className={classes.list}>
-          {pokemons.list.map(pokemon =>(
+          {paginatedPokemons().map(pokemon =>(
             <Pokemon key={pokemon.name} pokemon={pokemon} />
           ))}
       </Box>
+      <Pagination
+        className={classes.paginationWrapper}
+        count={maxPages()}
+        page={currentPage}
+        onChange={handlePageChange}
+      />
     </Box>
   )
 }

@@ -4,7 +4,7 @@ import pokeballBackground from './../../assets/images/pokeball.png'
 export const useStyles = makeStyles({
   pokemonWrapper: {
     width: 170,
-    minHeight: 246,
+    height: 272,
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
