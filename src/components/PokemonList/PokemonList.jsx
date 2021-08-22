@@ -11,6 +11,10 @@ import Pokemon from '../Pokemon/index'
 import { selectAllPokemons } from '../../store/Pokemons/Pokemons.selector'
 import { mountPokemonList } from '../../store/Pokemons/Pokemons.actions'
 
+import {
+  Link
+  } from 'react-router-dom'
+
 import { useStyles } from './PokemonList.styles'
 
 export const PokemonList = () => {
@@ -46,7 +50,13 @@ export const PokemonList = () => {
     <Box className={classes.listWrapper}>
       <Box className={classes.list}>
           {paginatedPokemons().map(pokemon =>(
-            <Pokemon key={pokemon.name} pokemon={pokemon} />
+            <Link
+              key={pokemon.name}
+              className={classes.link}
+              to={`/pokemon/${pokemon.name}`}
+              >
+              <Pokemon pokemon={pokemon} />
+            </Link>
           ))}
       </Box>
       <Pagination

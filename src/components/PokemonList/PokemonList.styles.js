@@ -18,5 +18,9 @@ export const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'center',
     marginTop: '2em',
+  },
+  link: {
+    textDecoration: 'none',
+    color:'unset'
   }
 })

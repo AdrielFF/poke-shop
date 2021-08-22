@@ -9,8 +9,7 @@ import {store, persistedStore} from './store/store'
 import { PersistGate } from 'redux-persist/integration/react'
 
 import {
-  makeStyles,
-  useTheme
+  makeStyles, useTheme
 } from '@material-ui/core/styles'
 
 const useStyles = makeStyles({
