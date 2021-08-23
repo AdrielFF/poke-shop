@@ -9,7 +9,7 @@ import {
 import { Paper } from '@material-ui/core'
 
 import PokemonList from './../PokemonList/index'
-import PokemonInfo from './../PokemonInfo/index'
+import { PokemonInfo } from './../PokemonInfo/index'
 
 import { useStyles } from './Main.styles'
 

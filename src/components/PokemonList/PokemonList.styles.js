@@ -18,6 +18,9 @@ export const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'center',
     marginTop: '2em',
+    '& button': {
+      fontFamily: 'Flexo-Caps, arial,sans-serif',
+    }
   },
   link: {
     textDecoration: 'none',

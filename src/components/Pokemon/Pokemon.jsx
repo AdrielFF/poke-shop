@@ -16,6 +16,8 @@ import {
 
 import { useStyles } from './Pokemon.styles'
 
+import { convertedId } from './../../helpers/index'
+
 export const Pokemon = (props) => {
   const classes = useStyles()
 
@@ -37,12 +39,6 @@ export const Pokemon = (props) => {
       })
     }
   })
-
-  const convertedId = (id) => {
-    const str = "" + id
-    const pad = "000"
-    return pad.substring(0, pad.length - str.length) + str
-  }
 
   return (
     <Box component="div" className={classes.pokemonWrapper} >

@@ -4,11 +4,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-import { createTheme, ThemeProvider } from '@material-ui/core/styles'
+import {
+  createTheme,
+  ThemeProvider
+} from '@material-ui/core/styles'
 
 const theme = createTheme({
   palette: {
     lightgrey: '#fafafb'
+  },
+  typography:{
+    fontFamily: [
+      'Flexo-Caps',
+    ]
   }
 })
 
