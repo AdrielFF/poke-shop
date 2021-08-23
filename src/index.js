@@ -15,9 +15,9 @@ const theme = createTheme({
   },
   typography:{
     fontFamily: [
-      'Flexo-Caps',
+      'Flexo-Caps, Varela-Round',
     ]
-  }
+  },
 })
 
 ReactDOM.render(

@@ -72,7 +72,7 @@ export const Pokemon = (props) => {
                 {pokemon.types.map((t, index) => (
                   <Box
                     display="flex"
-                    className={`${classes.typesWrapper} ${classes.types} ${t.type.name} darken`}
+                    className={`${classes.typesWrapper} ${classes.types} ${t.type.name}`}
                     key={index}
                   >
                     <Typography variant="caption">{t.type.name}</Typography>
