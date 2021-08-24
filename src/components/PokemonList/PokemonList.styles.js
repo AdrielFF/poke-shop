@@ -9,7 +9,8 @@ export const useStyles = makeStyles({
   },
   listWrapper: {
     boxShadow: '12px 0 8px -13px rgba(0, 0, 0, 0.8), -12px 0 8px -13px rgba(0, 0, 0, 0.8)',
-    margin: '4em auto',
+    height: '100%',
+    maxHeight: 'calc(1110px - 10em)',
     maxWidth: 768,
     width: '100%',
     padding: '2em 18px',

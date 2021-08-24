@@ -5,12 +5,14 @@ import { useSelector } from 'react-redux'
 import { Box } from '@material-ui/core'
 import { Pagination } from '@material-ui/lab'
 
-import Pokemon from '../Pokemon/index'
+import Pokemon from '../Pokemon/'
 import { selectAllPokemons } from '../../store/Pokemons/Pokemons.selector'
 
 import { useStyles } from './PokemonList.styles'
 
 export const PokemonList = () => {
+  const maxPages = () => (pokemons.list.length / MAX_ITEM_PER_PAGE)
+
   const classes = useStyles()
   const pokemons = useSelector(selectAllPokemons)
 
@@ -28,14 +30,12 @@ export const PokemonList = () => {
     return pokemons.list.slice(firstPageItemIndex, lastPageItem)
   }
 
-  const maxPages = () => (pokemons.list.length / MAX_ITEM_PER_PAGE)
-
   return (
     <Box className={classes.listWrapper}>
       <Box className={classes.list}>
-          {paginatedPokemons().map(pokemon =>(
-            <Pokemon key={pokemon.name} pokemon={pokemon} />
-          ))}
+          {paginatedPokemons().map((pokemon) => {
+            return <Pokemon key={pokemon.id} pokemonId={pokemon.id} pokemon={pokemon} />
+          })}
       </Box>
       <Pagination
         className={classes.paginationWrapper}

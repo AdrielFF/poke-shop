@@ -17,6 +17,15 @@ export const useStyles = makeStyles({
       }
     }
   },
+  cartStyle: {
+    flexDirection: 'row',
+    width: '100%',
+    height: 106,
+    marginBottom: '2em',
+    '& img': {
+      height: '100%',
+    }
+  },
   imageWrapper: {
     width: 170,
     height: 170,
@@ -27,6 +36,11 @@ export const useStyles = makeStyles({
     alignItems: 'center',
     backgroundImage: `url(${pokeballBackground})`,
     backgroundSize: 'contain',
+  },
+  cartImageWrapperStyle: {
+    position: 'relative',
+    height: 106,
+    width: 106,
   },
   image: {
     width: '100%',
@@ -81,5 +95,18 @@ export const useStyles = makeStyles({
     '&.fairy': {
       backgroundColor: '#ffe5f7',
     },
+  },
+  amountSpan: {
+    backgroundColor: 'red',
+    height: 16,
+    minWidth: 16,
+    borderRadius: '50%',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'absolute',
+    top: 8,
+    right: 8,
+    zIndex: 1,
   }
 })

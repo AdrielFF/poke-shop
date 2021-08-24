@@ -1,15 +1,7 @@
 import React, { useEffect } from 'react'
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from 'react-router-dom'
-
-import { Paper } from '@material-ui/core'
-
-import PokemonList from './../PokemonList/index'
-import { PokemonInfo } from './../PokemonInfo/index'
+import PokemonList from '../PokemonList/index'
+import ShoppingCart from '../ShoppingCart'
 import { selectAllPokemons } from '../../store/Pokemons/Pokemons.selector'
 import { mountPokemonList } from '../../store/Pokemons/Pokemons.actions'
 
@@ -17,6 +9,8 @@ import { useStyles } from './Main.styles'
 import { useDispatch, useSelector } from 'react-redux'
 
 import axios from 'axios'
+
+import { Paper } from '@material-ui/core'
 
 export const Main = () => {
   const classes = useStyles()
@@ -32,15 +26,9 @@ export const Main = () => {
   })
 
   return(
-    <div className={classes.mainWrapper}>
-      <Paper className={classes.paper} >
-        <Router>
-          <Switch>
-            <Route exact path={process.env.PUBLIC_URL + '/'} component={PokemonList} />
-            <Route path={process.env.PUBLIC_URL + '/pokemon/:name'} component={PokemonInfo} />
-          </Switch>
-        </Router>
-      </Paper>
-    </div>
+    <Paper className={classes.mainWrapper} >
+      <PokemonList />
+      <ShoppingCart />
+    </Paper>
   )
 }
