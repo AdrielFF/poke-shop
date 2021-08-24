@@ -52,9 +52,18 @@ export const Pokemon = (props) => {
 
   useEffect(fetchData, [list, pokemonId])
 
+  const handlePokemonClickEvent = () => {
+
+    if(!isCartItem){
+      dispatch(addPokemonToCart(pokemon))
+    }else {
+
+    }
+  }
+
   return (
     <Box
-      onClick={() => dispatch(addPokemonToCart(pokemon))}
+      onClick={handlePokemonClickEvent}
       component="div"
       className={`${classes.pokemonWrapper} ${isCartItem ? classes.cartStyle : ''}`}
     >
