@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import axios from 'axios'
 
 import { Paper } from '@material-ui/core'
+import { ShoppingCartAmountControl } from '../ShoppingCart/ShoppingCartAmountControl'
 
 export const Main = () => {
   const classes = useStyles()
@@ -29,6 +30,7 @@ export const Main = () => {
     <Paper className={classes.mainWrapper} >
       <PokemonList />
       <ShoppingCart />
+      <ShoppingCartAmountControl />
     </Paper>
   )
 }

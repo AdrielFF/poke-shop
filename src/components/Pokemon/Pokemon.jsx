@@ -14,12 +14,11 @@ import {
   useEffect
 } from 'react'
 
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 import { useStyles } from './Pokemon.styles'
 
 import { convertedId } from './../../helpers/index'
-import { addPokemonToCart } from '../../store/Pokemons/Pokemons.actions'
 import {
   selectAllCartItems,
   selectAllPokemons
@@ -27,7 +26,6 @@ import {
 
 export const Pokemon = (props) => {
   const classes = useStyles()
-  const dispatch = useDispatch()
   const cartList = useSelector(selectAllCartItems)
   const { list } = useSelector(selectAllPokemons)
 
@@ -36,7 +34,7 @@ export const Pokemon = (props) => {
   const {
     pokemonId,
     isCartItem,
-    pokemon
+    handlePokemonClick
   } = props
 
   const fetchData = () => {
@@ -52,18 +50,9 @@ export const Pokemon = (props) => {
 
   useEffect(fetchData, [list, pokemonId])
 
-  const handlePokemonClickEvent = () => {
-
-    if(!isCartItem){
-      dispatch(addPokemonToCart(pokemon))
-    }else {
-
-    }
-  }
-
   return (
     <Box
-      onClick={handlePokemonClickEvent}
+      onClick={handlePokemonClick}
       component="div"
       className={`${classes.pokemonWrapper} ${isCartItem ? classes.cartStyle : ''}`}
     >

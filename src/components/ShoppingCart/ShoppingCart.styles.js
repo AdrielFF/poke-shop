@@ -41,5 +41,15 @@ export const useStyles = makeStyles({
     '& svg': {
       marginLeft: '.6em',
     }
+  },
+  shoppingCartAmountControlWrapper: {
+    position: 'absolute',
+    left: '50%',
+    bottom: '50%',
+    transform: 'translate(-50%, 50%)',
+    width: 400,
+    height: 200,
+    zIndex: 1,
+    outline: 'none',
   }
 })

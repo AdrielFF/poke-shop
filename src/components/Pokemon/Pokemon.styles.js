@@ -98,8 +98,8 @@ export const useStyles = makeStyles({
   },
   amountSpan: {
     backgroundColor: 'red',
-    height: 16,
-    minWidth: 16,
+    height: 22,
+    minWidth: 22,
     borderRadius: '50%',
     display: 'flex',
     justifyContent: 'center',
