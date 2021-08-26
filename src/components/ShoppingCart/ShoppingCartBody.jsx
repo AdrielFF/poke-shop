@@ -20,7 +20,7 @@ const ShoppingCartHeader = () => {
   return(
     <Box className={classes.shoppingCartBody}>
       {Object.keys(cartList).map(cartitemId => {
-        return <Pokemon key={cartitemId} pokemonId={cartitemId} isCartItem={true} pokemon={pokemons.list[cartitemId]} />
+        return <Pokemon key={cartitemId} pokemonId={parseInt(cartitemId)} isCartItem={true} />
       })}
     </Box>
   )

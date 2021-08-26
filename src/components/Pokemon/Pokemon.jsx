@@ -79,7 +79,7 @@ export const Pokemon = (props) => {
               <img
                 className={classes.image}
                 src={require(`./../../assets/sprites/sprites/pokemon/other/official-artwork/${pokemonId}.png`).default}
-                alt={pokemon.name}
+                alt={pokemonInfo.name}
               />
             </Paper>
 
@@ -93,10 +93,10 @@ export const Pokemon = (props) => {
                 className={classes.text}
               >
                   Nº
-                  {convertedId(pokemon.id)}
+                  {convertedId(pokemonInfo.id)}
               </Typography>
               <Typography className={classes.text}>
-                  {pokemon.name}
+                  {pokemonInfo.name}
               </Typography>
               <Box display="flex">
                 {pokemonInfo.types.map((t, index) => (
@@ -109,7 +109,7 @@ export const Pokemon = (props) => {
                   </Box>
                 ))}
               </Box>
-              <Box fontFamily="Varela-Round" marginTop={1} >R$ {pokemon.price.replace(/\./g, ',')}</Box>
+              <Box fontFamily="Varela-Round" marginTop={1} >R$ { pokemonInfo.price.replace(/\./g, ',')}</Box>
             </div>
           </>
         )
