@@ -23,7 +23,11 @@ import {
   selectAllPokemons,
   selectAllCartItems
 } from '../../store/Pokemons/Pokemons.selector'
-import { toggleItemAmountModal } from '../../store/Pokemons/Pokemons.actions'
+import {
+  toggleItemAmountModal,
+  removePokemonFromCart,
+  setPokemonAmount
+} from '../../store/Pokemons/Pokemons.actions'
 import { useDispatch ,useSelector } from 'react-redux'
 
 export const ShoppingCartAmountModal = () => {
@@ -53,7 +57,12 @@ export const ShoppingCartAmountModal = () => {
   }
 
   const handleUpdateCart = () => {
+    handleClose()
+    if (amount <= 0 ){
+      return dispatch(removePokemonFromCart(pokemon))
+    }
 
+    dispatch(setPokemonAmount(pokemon.id, amount))
   }
 
   return (

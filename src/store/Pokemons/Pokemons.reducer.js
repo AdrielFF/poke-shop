@@ -22,11 +22,21 @@ export const pokemonReducer = (state = {list: [], isFilled: false}, action) => {
 export const cartReducer = (state = {}, action) => {
   switch (action.type) {
     case 'ADD_POKEMON_TO_CART':
-      const id = action.payload.id
       return {
         ...state,
-        [id]: (state[id] || 0) + 1
+        [action.payload.id]: (state[action.payload.id] || 0) + 1
       }
+      case 'SET_POKEMON_AMOUNT':
+        return {
+          ...state,
+          [action.payload.id]: action.payload.newAmount
+        }
+    case 'REMOVE_POKEMON_FROM_CART':
+      const newState = {
+        ...state
+      }
+      delete newState[action.payload.id]
+      return newState
     default:
       return state
   }
