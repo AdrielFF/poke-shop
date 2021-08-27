@@ -8,17 +8,20 @@ import storage from 'redux-persist/lib/storage'
 import {
   pokemonReducer,
   cartReducer,
+  itemAmountModalInfoReducer
 } from './Pokemons/Pokemons.reducer'
 
 const persistConfig ={
   key: 'root',
   storage,
   stateReconciler: autoMergeLevel2,
+  blacklist: ['itemAmountModalInfo']
 }
 
 const rootReducer = combineReducers({
   pokemons: pokemonReducer,
   cartList: cartReducer,
+  itemAmountModalInfo: itemAmountModalInfoReducer
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

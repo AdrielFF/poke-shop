@@ -31,3 +31,16 @@ export const cartReducer = (state = {}, action) => {
       return state
   }
 }
+
+export const itemAmountModalInfoReducer = (state = { pokemonId: null, open: false}, action) => {
+  switch (action.type) {
+    case 'TOGGLE_ITEM_AMOUNT_MODAL':
+      return {
+        ...state,
+        open: action.payload.open,
+        pokemonId: action.payload.pokemonId,
+      }
+    default:
+      return state
+  }
+}

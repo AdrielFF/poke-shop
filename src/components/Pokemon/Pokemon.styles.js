@@ -47,6 +47,11 @@ export const useStyles = makeStyles({
     transform: 'scale(.9)',
     transition: 'all .1s ease-in-out',
     userDrag: 'none',
+    '-webkit-user-drag': 'none',
+    '-khtml-user-drag': 'none',
+    '-moz-user-drag': 'none',
+    '-o-user-drag': 'none',
+    'user-drag': 'none',
   },
   text: {
     fontWeight: 'bolder',

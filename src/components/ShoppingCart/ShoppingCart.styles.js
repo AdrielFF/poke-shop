@@ -8,6 +8,7 @@ export const useStyles = makeStyles({
     maxWidth: 380,
     maxHeight: 1010,
     marginLeft: '1em',
+    userSelect: 'none',
   },
   shoppingCartFooter: {
     width:'100%',
@@ -42,7 +43,7 @@ export const useStyles = makeStyles({
       marginLeft: '.6em',
     }
   },
-  shoppingCartAmountControlWrapper: {
+  shoppingCartAmountModal: {
     position: 'absolute',
     left: '50%',
     bottom: '50%',
@@ -50,6 +51,53 @@ export const useStyles = makeStyles({
     width: 400,
     height: 200,
     zIndex: 1,
-    outline: 'none',
+    outline: 'none'
+  },
+  amounUpdateWrapper:{
+    width: 318,
+    textAlign: 'center',
+  },
+  modalImage: {
+    width: 84,
+    margin: '0 auto',
+    display: 'block',
+    '-webkit-user-drag': 'none',
+    '-khtml-user-drag': 'none',
+    '-moz-user-drag': 'none',
+    '-o-user-drag': 'none',
+    'user-drag': 'none',
+    userSelect: 'none',
+  },
+  amountUpdate: {
+    userSelect: 'none',
+  },
+  amountUpdateActionsWrapper:{
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+    padding: '8px 18px',
+  },
+  amountControlWrapper: {
+    padding: 0,
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginLeft: '0 !important',
+  },
+  amountSubmitButton: {
+    flexGrow: 1,
+    display: 'flex',
+    marginRight: '0 !important',
+    justifyContent: 'space-around',
+    backgroundColor: '#313030',
+    color: '#fff',
+    padding: '6px 13px',
+    '&:hover': {
+      backgroundColor: '#1d1d1d',
+    }
+  },
+  customDivider: {
+    width: '100%',
+    borderTop: '1px solid #cecece',
+    marginBottom: 8,
   }
 })

@@ -11,3 +11,10 @@ export const addPokemonToCart = (pokemon) => {
     payload: pokemon
   }
 }
+
+export const toggleItemAmountModal = (itemModalInfo) => {
+  return {
+    type: 'TOGGLE_ITEM_AMOUNT_MODAL',
+    payload: {pokemonId: itemModalInfo.pokemonId, open: itemModalInfo.open}
+  }
+}
