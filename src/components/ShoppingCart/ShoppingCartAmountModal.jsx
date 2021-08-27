@@ -83,7 +83,10 @@ export const ShoppingCartAmountModal = () => {
                 <AddIcon fontSize="small" />
               </IconButton>
             </Paper>
-            <Button onClick={handleUpdateCart} color="primary" className={classes.amountSubmitButton}>
+            <Button
+              classes={{root: classes.amountSubmitButton}}
+              onClick={handleUpdateCart}
+            >
               <Typography color="inherit">{amount <= 0 ? 'Remove' : 'Update'}</Typography>
               {
                 (modalCurrentItemPrice > 0) && (

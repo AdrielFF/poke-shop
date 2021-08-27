@@ -12,9 +12,6 @@ import {
 const theme = createTheme({
   palette: {
     lightgrey: '#fafafb',
-    primary: {
-      main: '#fff',
-    }
   },
   typography:{
     fontFamily: [

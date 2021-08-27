@@ -89,6 +89,7 @@ export const useStyles = makeStyles({
     marginRight: '0 !important',
     justifyContent: 'space-around',
     backgroundColor: '#313030',
+    color: '#fff',
     padding: '6px 13px',
     '&:hover': {
       backgroundColor: '#1d1d1d',
