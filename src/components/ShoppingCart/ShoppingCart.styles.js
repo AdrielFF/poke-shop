@@ -89,10 +89,10 @@ export const useStyles = makeStyles({
     marginRight: '0 !important',
     justifyContent: 'space-around',
     backgroundColor: '#313030',
-    color: '#fff',
+    color: '#fff !important',
     padding: '6px 13px',
     '&:hover': {
-      backgroundColor: '#1d1d1d',
+      backgroundColor: '#1d1d1d !important',
     }
   },
   customDivider: {
