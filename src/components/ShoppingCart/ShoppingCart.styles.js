@@ -60,6 +60,7 @@ export const useStyles = makeStyles({
   },
   amounUpdateWrapper:{
     textAlign: 'center',
+    minWidth: 280,
   },
   dialogImage: {
     width: 84,
@@ -89,6 +90,7 @@ export const useStyles = makeStyles({
   },
   submitButton: {
     flexGrow: 1,
+    minWidth: 172,
     display: 'flex',
     marginRight: '0 !important',
     justifyContent: 'space-around',
@@ -102,8 +104,4 @@ export const useStyles = makeStyles({
       backgroundColor: '#8a0a13 !important',
     }
   },
-  dialogImage: {
-    display: 'block',
-    margin: '0 auto',
-  }
 })

@@ -8,11 +8,7 @@ import {
  Button,
 } from '@material-ui/core'
 
-import {
-  selectAllCartItems,
-  selectAllPokemons,
-  selectCheckouDialog
-  } from '../../store/Pokemons/Pokemons.selector'
+import { selectCheckouDialog } from '../../store/Pokemons/Pokemons.selector'
 
 import {
   useSelector,
@@ -26,11 +22,6 @@ export const ShoppginCartCheckOutDialog = () => {
   const classes = useStyles()
   const dialogInfo = useSelector(selectCheckouDialog)
   const dispatch = useDispatch()
-  const cartItems = useSelector(selectAllCartItems)
-  const pokemons = useSelector(selectAllPokemons)
-  let total = 0
-
-  Object.entries(cartItems).map((item) => total = total + (parseInt(pokemons.list[item[0]].price) * item[1]))
 
   return (
     <Dialog
@@ -38,7 +29,7 @@ export const ShoppginCartCheckOutDialog = () => {
       onClose={() => dispatch(closeCheckoutDialog())}
     >
       <DialogTitle>
-        Purchase of <strong>${total}</strong> completed successfully
+        Purchase completed successfully
       </DialogTitle>
       <DialogContent>
         <img

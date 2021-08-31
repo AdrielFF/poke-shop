@@ -34,7 +34,9 @@ const ShoppingCartFooter = () => {
 
   let total = 0
 
-  Object.entries(cartItems).map((item) => total = total + (parseInt(pokemons.list[item[0]].price) * item[1]))
+  Object.entries(cartItems).map((item) => {
+    total = total + (parseInt(pokemons.list.find(p => p.id === parseInt(item[0])).price) * item[1])
+  })
 
   return (
     <Paper

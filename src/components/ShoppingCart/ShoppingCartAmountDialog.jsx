@@ -71,6 +71,7 @@ export const ShoppingCartAmountDialog = () => {
       open={itemAmountDialogInfo.open}
       onClose={handleClose}
       className={classes.amounUpdateWrapper}
+      maxWidth="lg"
     >
       <DialogTitle onClose={handleClose}>
         {pokemon.name}
