@@ -4,7 +4,7 @@ import PokemonList from '../PokemonList/index'
 import ShoppingCart from '../ShoppingCart'
 import {
   selectAllPokemons,
-  selectItemAmountModalInfo
+  selectItemAmountDialogInfo
 } from '../../store/Pokemons/Pokemons.selector'
 import { mountPokemonList } from '../../store/Pokemons/Pokemons.actions'
 
@@ -14,12 +14,13 @@ import { useDispatch, useSelector } from 'react-redux'
 import axios from 'axios'
 
 import { Paper } from '@material-ui/core'
-import { ShoppingCartAmountModal } from '../ShoppingCart/ShoppingCartAmountModal'
+import { ShoppingCartAmountDialog } from '../ShoppingCart/ShoppingCartAmountDialog'
+import { ShoppginCartCheckOutDialog } from '../ShoppingCart/ShoppingCartCheckOutDialog'
 
 export const Main = () => {
   const classes = useStyles()
   const pokemons = useSelector(selectAllPokemons)
-  const pokemonModalInfo = useSelector(selectItemAmountModalInfo)
+  const pokemonDialogInfo = useSelector(selectItemAmountDialogInfo)
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -34,9 +35,10 @@ export const Main = () => {
     <Paper className={classes.mainWrapper} >
       <PokemonList />
       <ShoppingCart />
-      {pokemonModalInfo.pokemonId && (
-        <ShoppingCartAmountModal />
+      {pokemonDialogInfo.pokemonId && (
+        <ShoppingCartAmountDialog />
       )}
+      <ShoppginCartCheckOutDialog />
     </Paper>
   )
 }

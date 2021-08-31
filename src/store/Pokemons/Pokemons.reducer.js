@@ -8,7 +8,7 @@ export const pokemonReducer = (state = {list: [], isFilled: false}, action) => {
               id: parseInt(p.url.replace(/(.*pokemon\/)([0-9]+)\/(.*)/, "$2")),
               url: p.url,
               name: p.name,
-              price :(Math.floor(Math.random() * (100 - 20 + 1)) + 20).toFixed(2),
+              price :(Math.floor(Math.random() * (30 - 5 + 1)) + 5).toFixed(2),
             }
           })
         ),
@@ -37,19 +37,32 @@ export const cartReducer = (state = {}, action) => {
       }
       delete newState[action.payload.id]
       return newState
+    case 'CLEAR_CART':
+      return {}
     default:
       return state
   }
 }
 
-export const itemAmountModalInfoReducer = (state = { pokemonId: null, open: false}, action) => {
+export const itemAmountDialogInfoReducer = (state = { pokemonId: null, open: false}, action) => {
   switch (action.type) {
-    case 'TOGGLE_ITEM_AMOUNT_MODAL':
+    case 'TOGGLE_ITEM_AMOUNT_DIALOG':
       return {
         ...state,
         open: action.payload.open,
         pokemonId: action.payload.pokemonId,
       }
+    default:
+      return state
+  }
+}
+
+export const checkoutDialogReducer = (state = {open: false}, action) => {
+  switch(action.type){
+    case 'OPEN_CHECKOUT_DIALOG':
+      return {open: true}
+    case 'CLOSE_CHECKOUT_DIALOG':
+      return {open: false}
     default:
       return state
   }

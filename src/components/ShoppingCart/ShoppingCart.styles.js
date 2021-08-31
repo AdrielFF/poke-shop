@@ -9,18 +9,23 @@ export const useStyles = makeStyles({
     maxHeight: 1010,
     marginLeft: '1em',
     userSelect: 'none',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between'
   },
   shoppingCartFooter: {
-    width:'100%',
-    minHeight: 240,
+    maxWidth: '100%',
     backgroundColor: '#fff',
     marginTop: '1em',
-    borderRadius: '4px 4px 0 0'
+    borderRadius: '4px 4px 0 0',
+    padding: '1em',
+    textAlign: 'end',
+    display: 'flex',
+    flexDirection: 'column',
   },
   shoppingCartBody: {
     width:'100%',
-    height: 696,
-    maxHeight: 696,
+    flexGrow: 1,
     backgroundColor: '#fff',
     overflowY: 'auto',
     overflowX: 'hidden',
@@ -43,7 +48,7 @@ export const useStyles = makeStyles({
       marginLeft: '.6em',
     }
   },
-  shoppingCartAmountModal: {
+  shoppingCartAmountDialog: {
     position: 'absolute',
     left: '50%',
     bottom: '50%',
@@ -54,10 +59,9 @@ export const useStyles = makeStyles({
     outline: 'none'
   },
   amounUpdateWrapper:{
-    width: 318,
     textAlign: 'center',
   },
-  modalImage: {
+  dialogImage: {
     width: 84,
     margin: '0 auto',
     display: 'block',
@@ -83,21 +87,23 @@ export const useStyles = makeStyles({
     alignItems: 'center',
     marginLeft: '0 !important',
   },
-  amountSubmitButton: {
+  submitButton: {
     flexGrow: 1,
     display: 'flex',
     marginRight: '0 !important',
     justifyContent: 'space-around',
-    backgroundColor: '#313030',
+    backgroundColor: '#ea1d2c',
     color: '#fff !important',
     padding: '6px 13px',
+    '&:disabled': {
+      backgroundColor: '#9e9e9e',
+    },
     '&:hover': {
-      backgroundColor: '#1d1d1d !important',
+      backgroundColor: '#8a0a13 !important',
     }
   },
-  customDivider: {
-    width: '100%',
-    borderTop: '1px solid #cecece',
-    marginBottom: 8,
+  dialogImage: {
+    display: 'block',
+    margin: '0 auto',
   }
 })

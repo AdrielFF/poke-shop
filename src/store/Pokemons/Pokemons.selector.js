@@ -4,4 +4,6 @@ export const selectAllCartItems = (state) => state.cartList
 
 export const selectAllPrices = (state) => state.pokemons.prices
 
-export const selectItemAmountModalInfo = (state) => state.itemAmountModalInfo
+export const selectItemAmountDialogInfo = (state) => state.itemAmountDialogInfo
+
+export const selectCheckouDialog = (state) => state.checkOutDialog

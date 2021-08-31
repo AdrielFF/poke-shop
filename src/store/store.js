@@ -8,20 +8,25 @@ import storage from 'redux-persist/lib/storage'
 import {
   pokemonReducer,
   cartReducer,
-  itemAmountModalInfoReducer
+  itemAmountDialogInfoReducer,
+  checkoutDialogReducer
 } from './Pokemons/Pokemons.reducer'
 
 const persistConfig ={
-  key: 'root',
+  key: 'poke-shop@1.1',
   storage,
   stateReconciler: autoMergeLevel2,
-  blacklist: ['itemAmountModalInfo']
+  blacklist: [
+    'itemAmountDialogInfo',
+    'checkOutDialog'
+  ]
 }
 
 const rootReducer = combineReducers({
   pokemons: pokemonReducer,
   cartList: cartReducer,
-  itemAmountModalInfo: itemAmountModalInfoReducer
+  itemAmountDialogInfo: itemAmountDialogInfoReducer,
+  checkOutDialog: checkoutDialogReducer,
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

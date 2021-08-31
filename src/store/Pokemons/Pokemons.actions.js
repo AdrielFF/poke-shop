@@ -26,9 +26,30 @@ export const removePokemonFromCart = (pokemon) => {
   }
 }
 
-export const toggleItemAmountModal = (itemModalInfo) => {
+export const toggleItemAmountDialog = (itemDialogInfo) => {
   return {
-    type: 'TOGGLE_ITEM_AMOUNT_MODAL',
-    payload: {pokemonId: itemModalInfo.pokemonId, open: itemModalInfo.open}
+    type: 'TOGGLE_ITEM_AMOUNT_DIALOG',
+    payload: {pokemonId: itemDialogInfo.pokemonId, open: itemDialogInfo.open}
+  }
+}
+
+export const openCheckoutDialog = () => {
+  return {
+    type: 'OPEN_CHECKOUT_DIALOG',
+    payload: {}
+  }
+}
+
+export const closeCheckoutDialog = () => {
+  return {
+    type: 'CLOSE_CHECKOUT_DIALOG',
+    payload: {}
+  }
+}
+
+export const clearCart = () => {
+  return {
+    type: 'CLEAR_CART',
+    payload: {}
   }
 }

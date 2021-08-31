@@ -11,7 +11,7 @@ import {
   useDispatch
 } from 'react-redux'
 
-import { toggleItemAmountModal } from '../../store/Pokemons/Pokemons.actions'
+import { toggleItemAmountDialog } from '../../store/Pokemons/Pokemons.actions'
 import { selectAllCartItems } from '../../store/Pokemons/Pokemons.selector'
 
 const ShoppingCartHeader = () => {
@@ -26,7 +26,7 @@ const ShoppingCartHeader = () => {
           key={cartitemId}
           pokemonId={parseInt(cartitemId)}
           isCartItem={true}
-          handlePokemonClick={() => dispatch(toggleItemAmountModal({pokemonId: parseInt(cartitemId), open: true}))}
+          handlePokemonClick={() => dispatch(toggleItemAmountDialog({pokemonId: parseInt(cartitemId), open: true}))}
         />
       ))}
     </Box>

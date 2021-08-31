@@ -98,7 +98,7 @@ export const Pokemon = (props) => {
                   </Box>
                 ))}
               </Box>
-              <Box fontFamily="Varela-Round" marginTop={1} >R$ { pokemonInfo.price.replace(/\./g, ',')}</Box>
+              <Box fontFamily="Varela-Round" marginTop={1} >${ pokemonInfo.price.replace(/\./g, ',')}</Box>
             </div>
           </>
         )
